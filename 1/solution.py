@@ -4,6 +4,13 @@ import re
 file = open('input.txt')
 inputs = file.read().split('\n')
 
+####################### part 1 ############################
+
+'''
+Naive solution
+Simply look for first and last occurence of a digit
+'''
+
 numlist = '0123456789'
 
 sumcv = 0
@@ -26,6 +33,15 @@ print(sumcv)
 sols = {}
 
 ####################### part 2 ###########################
+
+'''
+Regex replacement does not work
+e.g 13twotwonec
+intended: 13221c
+regex:1322nec
+
+have to iteratively look at substrings
+'''
 
 digits_dict = {
         "1": "1",
